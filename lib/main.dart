@@ -1,20 +1,22 @@
+import 'dart:core';
+
+import 'package:firstapp/homepage.dart';
 import 'package:flutter/material.dart';
 
-void main()
-{
+void main() {
   runApp(MyApp());
 }
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
+class MyApp extends StatelessWidget {
+//Data Types
+
+  // double temp = 33.22;
+  // var num = "two";
+  // final pi = 3.14;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Material(
-      child: Center (child:Container(child: Text("My first App")
-      ),
-      ),
-    ),
+    return MaterialApp(
+      home: HomePage() ,
     );
-
   }
 }
