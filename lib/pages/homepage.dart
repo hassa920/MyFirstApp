@@ -10,11 +10,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: Text("First App in flutter")),
       body: Center(
         child: Container(
-            child: Text(
-                "$name day $a in flutter")),
+            child: Text("$name day $a in flutter",)),
       ),
+
       drawer: Drawer(),
     );
+
   }
 }
 
