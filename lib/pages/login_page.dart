@@ -1,3 +1,4 @@
+import 'package:firstapp/utils/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
@@ -5,14 +6,12 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(color: Colors.white, child:Column(children: [
-    Image.asset("sources/images/login_image.png",fit: BoxFit.cover,),
+    return Material(color: Colors.white,  child: SingleChildScrollView(  child:Column(children: [
+    Image.asset("sources/images/login_image.png",fit: BoxFit.cover, /*height: 800,*/),
 
       SizedBox(height: 25,),
-      Text("Welcome" , style: TextStyle (fontWeight: FontWeight.bold, fontSize: 20,
-      )
-
-      ),
+      Text("Welcome" , style: TextStyle (fontWeight: FontWeight.bold, fontSize: 30,
+      )),
       SizedBox(height: 25,),
 
 
@@ -26,18 +25,18 @@ class LoginPage extends StatelessWidget {
           TextFormField( obscureText: true,decoration: InputDecoration(hintText: "Enter Password", labelText: "Password"
           )
           ),
-          SizedBox(height: 25,),
+          SizedBox(height: 40,),
           ElevatedButton( onPressed: ()
             {
-              print("Login Button Clicked");
-            }, child: Text("Login"), style: TextButton.styleFrom(),)
+             Navigator.pushNamed(context, MyRoute.homePage);
+            }, child: Text("Login"), style: TextButton.styleFrom(minimumSize: Size(150, 40)),)
 
         ],),
       )
     ]),
 
 
-
+),
     );
   }
 }
